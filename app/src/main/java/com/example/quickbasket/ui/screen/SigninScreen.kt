@@ -44,7 +44,7 @@ fun SigninScreen(modifier: Modifier = Modifier) {
             .background(Color.White)
     ) {
         IconButton(
-            onClick = { /* Handle back button click */ },
+            onClick = { /* TODO Handle back button click */ },
             modifier = Modifier
                 .align(Alignment.TopStart)
                 .offset(x = 16.dp, y = 16.dp)
@@ -133,7 +133,7 @@ fun SigninScreen(modifier: Modifier = Modifier) {
             )
         }
         Button(
-            onClick = { /* Handle sign in click */ },
+            onClick = { /* TODO Handle sign in click */ },
             shape = RoundedCornerShape(25.dp),
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xfff97300)),
             contentPadding = PaddingValues(horizontal = 41.dp, vertical = 4.dp),
