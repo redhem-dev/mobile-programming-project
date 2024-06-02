@@ -37,7 +37,7 @@ import androidx.compose.ui.unit.sp
 import com.example.quickbasket.R
 import com.example.quickbasket.ui.theme.Orange
 
-// zasad sve bana
+// zasad sve banane
 @Composable
 fun CatalogueScreen(modifier : Modifier = Modifier) {
 

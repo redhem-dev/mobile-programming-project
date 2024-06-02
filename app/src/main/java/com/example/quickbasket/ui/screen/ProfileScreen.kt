@@ -115,7 +115,9 @@ fun ProfileScreen(modifier: Modifier = Modifier) {
                     .align(Alignment.CenterHorizontally)
                     .requiredWidth(width = 153.dp)
                     .requiredHeight(height = 35.dp)
-            ) {
+            )
+
+            {
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(10.dp, Alignment.CenterHorizontally),
                     verticalAlignment = Alignment.CenterVertically,
@@ -126,6 +128,34 @@ fun ProfileScreen(modifier: Modifier = Modifier) {
                 ) {
                     Text(
                         text = "Edit profile",
+                        color = Color.White,
+                        style = TextStyle(
+                            fontSize = 15.sp))
+                }
+            }
+            OutlinedButton(
+                onClick = { /* TODO handle click navigate to edit profile page */ },
+                shape = RoundedCornerShape(25.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = Color(0xfff97300)),
+                contentPadding = PaddingValues(horizontal = 41.dp, vertical = 4.dp),
+                border = BorderStroke(1.dp, Color.Black),
+                modifier = Modifier
+                    .align(Alignment.CenterHorizontally)
+                    .requiredWidth(width = 153.dp)
+                    .requiredHeight(height = 35.dp)
+            )
+
+            {
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(10.dp, Alignment.CenterHorizontally),
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier
+                        .align(Alignment.CenterVertically)
+                        .requiredWidth(width = 153.dp)
+                        .requiredHeight(height = 35.dp)
+                ) {
+                    Text(
+                        text = "Delete profile",
                         color = Color.White,
                         style = TextStyle(
                             fontSize = 15.sp))

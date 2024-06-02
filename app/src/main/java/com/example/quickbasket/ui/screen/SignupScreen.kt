@@ -181,7 +181,7 @@ fun SignupScreen(modifier: Modifier = Modifier) {
             )
 
             Button(
-                onClick = { /* Handle log in click */ },
+                onClick = { /* TODO Handle log in click */ },
                 colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
                 modifier = Modifier
 
