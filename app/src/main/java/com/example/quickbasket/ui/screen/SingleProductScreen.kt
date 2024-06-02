@@ -38,22 +38,11 @@ fun SingleProductPage(modifier: Modifier = Modifier) {
     Box(
         modifier = modifier
             .requiredWidth(width = 360.dp)
-            .requiredHeight(height = 691.dp)
+            .requiredHeight(height = 800.dp)
             .background(color = Color.White)
 
     ) {
-        IconButton(
-            onClick = { /* TODO Handle back button click */ },
-            modifier = Modifier
-                .align(Alignment.TopStart)
-                .offset(x = 16.dp, y = 16.dp)
-        ) {
-            Icon(
-                painter = painterResource(id = R.drawable.goback_arrow),
-                contentDescription = "Back",
-                tint = Color.Black
-            )
-        }
+
         Text(
             text = "Bananas",
             color = Color.Black,
@@ -153,7 +142,7 @@ fun SingleProductPage(modifier: Modifier = Modifier) {
     }
 }
 
-@Preview(widthDp = 360, heightDp = 691)
+@Preview(widthDp = 360, heightDp = 800)
 @Composable
 private fun SingleProductPagePreview() {
     SingleProductPage(Modifier)
