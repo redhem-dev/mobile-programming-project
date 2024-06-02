@@ -30,10 +30,23 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.quickbasket.R
+import com.example.quickbasket.model.viewModel.AppViewModelProvider
+import com.example.quickbasket.model.viewModel.SignInViewModel
+import com.example.quickbasket.ui.screen.navigation.NavigationDestination
 
+object SigninDestination : NavigationDestination {
+    override val route = "signin"
+    override val title = "Signin"
+}
 @Composable
-fun SigninScreen(modifier: Modifier = Modifier) {
+fun SigninScreen(modifier: Modifier = Modifier,
+                 navigateToSignUpPage: () -> Unit={},
+                 navigateToHomePage: () -> Unit={},
+                 navigateToSplashPage: ()-> Unit = {},
+                 viewModel: SignInViewModel = viewModel(factory = AppViewModelProvider.Factory)
+) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
 
@@ -118,7 +131,7 @@ fun SigninScreen(modifier: Modifier = Modifier) {
                 .offset(x = 90.dp, y = 458.dp)
         )
         Button(
-            onClick = { /* Handle sign up click */ },
+            onClick = { navigateToSignUpPage() },
             shape = RoundedCornerShape(25.dp),
             colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
             contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp),
@@ -133,7 +146,7 @@ fun SigninScreen(modifier: Modifier = Modifier) {
             )
         }
         Button(
-            onClick = { /* TODO Handle sign in click */ },
+            onClick = { navigateToHomePage() },
             shape = RoundedCornerShape(25.dp),
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xfff97300)),
             contentPadding = PaddingValues(horizontal = 41.dp, vertical = 4.dp),

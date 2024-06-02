@@ -35,9 +35,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.quickbasket.R
+import com.example.quickbasket.ui.screen.navigation.NavigationDestination
 import com.example.quickbasket.ui.theme.Orange
 
 // zasad sve banane
+
+object CatalogueDestination: NavigationDestination {
+    override val route = "catalogue"
+    override val title = "Catalogue"
+}
 @Composable
 fun CatalogueScreen(modifier : Modifier = Modifier) {
 
@@ -160,12 +166,6 @@ fun ProductItem(modifier: Modifier = Modifier) {
             }
         }
     }
-}
-
-@Preview(widthDp = 150, heightDp = 197)
-@Composable
-private fun ProductItemPreview() {
-    ProductItem(Modifier)
 }
 
 @Preview(widthDp = 360, heightDp = 800)

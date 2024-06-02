@@ -23,7 +23,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.quickbasket.R
+import com.example.quickbasket.ui.screen.navigation.NavigationDestination
 import com.example.quickbasket.ui.theme.Orange
+
+object UpdateProfileDestination : NavigationDestination {
+    override val route = "updateProfile"
+    override val title = "Update Profile"
+}
 
 @Composable
 fun UpdateProfileScreen(modifier: Modifier = Modifier) {

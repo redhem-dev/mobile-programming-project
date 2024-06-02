@@ -33,6 +33,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.quickbasket.R
+import com.example.quickbasket.ui.screen.navigation.NavigationDestination
+
+object SignupDestination : NavigationDestination {
+    override val route = "signup"
+    override val title = "Signup"
+}
 
 @Composable
 fun SignupScreen(modifier: Modifier = Modifier) {

@@ -35,7 +35,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.quickbasket.R
+import com.example.quickbasket.ui.screen.navigation.NavigationDestination
 
+object ProfileDestination : NavigationDestination {
+    override val route = "profile"
+    override val title = "Profile"
+}
 
 @Composable
 fun ProfileScreen(modifier: Modifier = Modifier) {

@@ -31,7 +31,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
 import com.example.quickbasket.R
+import com.example.quickbasket.ui.screen.navigation.NavigationDestination
 import com.example.quickbasket.ui.theme.*
+
+object SingleProductDestination : NavigationDestination {
+    override val route = "singleProduct"
+    override val title = "SingleProduct"
+}
 
 @Composable
 fun SingleProductPage(modifier: Modifier = Modifier) {
